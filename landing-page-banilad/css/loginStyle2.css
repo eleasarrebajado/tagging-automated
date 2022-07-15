@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.videblackColor {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+  background-color: rgba(0, 0, 0, 0.363);
+}
+
+.video-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1000;
+}
+
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.login-main {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-main--box {
+  width: 328px;
+  height: 461px;
+  background: #FFFAE7;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.44);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.44);
+  border-radius: 22px;
+}
+
+.login-main--box__container-a {
+  width: 100%;
+  height: 119px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-main--box__container-a img {
+  width: 97.28px;
+  height: auto;
+  -webkit-clip-path: circle(46.3% at 50% 50%);
+  clip-path: circle(46.3% at 50% 50%);
+}
+
+.login-main--box .input-btn-a {
+  width: 100%;
+  height: 37px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  font-family: "Montserrat", "sans-serif";
+  color: #ec1c24;
+}
+
+.login-main--box .input-btn-a span {
+  font-size: 0.75rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #d80000;
+}
+
+.login-main--box a {
+  color: red;
+  text-decoration: none;
+}
+
+.login-main--box__container-b {
+  width: 100%;
+  height: 177px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login-main--box__container-b .input-text-a {
+  width: 254.06px;
+  height: 23.89px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 0;
+  border-bottom: 1px solid #000000;
+}
+
+.login-main--box__container-b .input-text-a__box-iconText-a {
+  width: 31px;
+  height: 20px;
+}
+
+.login-main--box__container-b .input-text-a__box-iconText-b {
+  width: 223px;
+  height: 20px;
+}
+
+.login-main--box__container-b .input-text-a__box-iconText-b input[type=text] {
+  width: 80%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-family: "Montserrat", "sans-serif";
+  color: #484848;
+}
+
+.login-main--box__container-b .input-text-b {
+  width: 254.06px;
+  height: 23.89px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 3rem;
+  border-bottom: 1px solid #000000;
+}
+
+.login-main--box__container-b .input-text-b__box-iconText--a {
+  width: 31px;
+  height: 20px;
+}
+
+.login-main--box__container-b .input-text-b__box-iconText-b {
+  width: 222px;
+  height: 20px;
+}
+
+.login-main--box__container-b .input-text-b__box-iconText-b input[type=password] {
+  width: 95%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-family: "Montserrat", "sans-serif";
+  color: #484848;
+}
+
+.login-main--box__container-b .input-text-b__box-iconText-b--showHide {
+  width: 32px;
+  height: 20px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-main--box__container-b .input-text-b__box-iconText-b--showHide img {
+  width: 20px;
+  height: auto;
+}
+
+.login-main--box__container-b .input-text-b__box-iconText-b .inputTextNew {
+  width: 95%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-family: "Montserrat", "sans-serif";
+  color: #484848;
+}
+
+.login-main--box__container-c {
+  width: 100%;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login-main--box__container-c .input-btn-b {
+  width: 100%;
+  height: 57px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-main--box__container-c .input-btn-b input[type=submit] {
+  width: 254px;
+  height: 39px;
+  background: #009461;
+  border-radius: 18px;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-main--box__container-c .input-btn-b input[type=submit]:hover {
+  background-color: #006944;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-main--box__container-c .error-div {
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+}
+
+.login-main--box__container-c .error-div h5 {
+  color: red;
+}

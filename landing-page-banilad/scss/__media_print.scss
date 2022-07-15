@@ -1,0 +1,43 @@
+@media print{
+ 
+body{
+    background-color: white!important;
+}
+
+*{
+    padding: 0!important;
+}
+
+
+    .nav-side-a{
+        display: none!important;
+    }
+
+
+    .nav-menu__wrapper, .tag-wrapper a{
+        display: none!important;
+    }
+
+    .top-menu{
+        display: none!important;
+    }
+
+    .nav-side-b{
+        background-color: white!important;
+    }
+
+    .tagging-container{
+        background-color: white!important;
+    }
+
+    .pageStyle{
+        display: none;
+    }
+
+    .footer-container{
+        padding: 0 0.5rem!important;
+    }
+
+
+    
+}

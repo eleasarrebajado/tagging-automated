@@ -1,0 +1,389 @@
+@import '_var_stylesheet.scss';
+@import '__media_print.scss';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    font-family: Montserrat, sans-serif
+}
+
+@font-face{
+    font-family: Montserrat, sans-serif;
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+.top-menu{
+    max-width: 100%;
+    height: 3.063rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    background-color: #009461;
+
+    &__container{
+        flex-basis: 50%;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &--box-a{
+            flex-basis: 40%;
+            width: 40%;
+            text-align: right;
+            color: $white;
+        }
+        &--box-b{
+            flex-basis: 20%;
+            width: 30%;
+            padding-left: 0.688rem;
+            font-weight: bold;
+
+            img{
+                width: 3.625rem;
+                height: auto;
+            }
+        } // <--------------- end of the division 
+
+        &__container{
+            flex-basis: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+    
+            .top-container-box{
+                width: 40%;
+                padding: 12px;
+
+                    &__menu-box-a{
+                     width: 100%;
+                     display: flex;
+                     flex-direction: row;
+
+                        .menu-box-a--container-a{
+                         width: 20%;
+
+                            .image-box{
+                             width: 30px;
+                             height: 30px;
+                             margin: 0 auto;
+                             border-radius: 50%;
+                             overflow: hidden;
+
+                             img{
+                                 width: 100%;
+                                 height: auto;
+                             }
+
+                            }
+                        }
+                        .menu-box-a--container-b{
+                         width: 80%;
+                         display: flex;
+                         align-items: center;
+
+                            p{
+                                color: #ffffff;
+                            }
+                        }
+                    } // <---------------- this end the division 
+
+                    &__menu-box-b{
+                        width: 15%;
+                        display: flex;
+                        color: $white;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        display: flex;
+                        flex-direction: row;
+                        background-color: #006e48;
+
+                        &:hover{
+                            opacity: 0.7;
+                        }
+                    }
+            }
+        }
+
+
+
+    }
+
+    
+} // <---------- this is the end of top menu division 
+
+.wrapper{
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .nav-side-a{
+        width: 23rem;
+        height: 100%;
+        background-color: $black2;
+        transition: $ease_in_out2;
+        opacity: 1;
+
+        &.active{
+            width: 0;
+            overflow: hidden;
+            transition: $ease_in_out2;
+            opacity: 0;
+        }
+
+        .menu{
+            width: 100%;
+            padding: 1rem 3rem;
+            line-height: 0.8;
+
+            h4{
+                color: $green;
+            }
+            h3{
+                color: $white;
+            }
+        }
+
+        .tagging-div::-webkit-scrollbar{
+            display: none;
+        }
+
+        .tagging-div{
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .tagging-div{
+            max-width: 100%;
+            height: 700px;
+            // background-color: green;
+            overflow-y: scroll;
+            padding: 1rem;
+            // border: 1px solid rgb(221, 221, 221);
+
+            &__container{
+                max-width: 100%;
+                list-style-type: none;
+                // border: 1px solid black;
+
+                .list-btn{
+                    cursor: pointer;
+                    max-width: 100%;
+                    padding: 0.563rem;
+                    border-radius: 0.3rem;
+                    transition: $ease_in_out;
+                    border: 1px solid $black2;
+                    background-color: $green;
+                    color: $white;
+
+                    &:hover{
+                        padding: 0.563rem 2rem;
+                        transition: $ease_in_out;
+                        background-color: #007a50;
+                    }
+
+                    &__list-container{
+                        max-width: 100%;
+                        overflow: hidden;
+                        padding: 0;
+                        line-height: 2;
+                        border-left: 2px solid rgb(192, 192, 192);
+                        background-color: rgb(255, 250, 244);
+                        
+
+                        form{
+                            max-width: 100%;
+                            height: 0;
+                            transition: $ease_in_out;
+                            overflow: hidden;
+
+                            input[type=submit]{
+                                padding: 6px 23px;
+                                border-radius: 0.4rem;
+                                background-color: #ff7101;
+                                cursor: pointer;
+                                border: none;
+
+                                &:hover{
+                                    background-color: #e66300;
+                                }
+                            }
+
+                            p{
+                                cursor: pointer;
+        
+                                &:hover{
+                                     opacity: 0.8;
+                                }
+                            }
+        
+                            &.active{
+                                height: 21rem;
+                                padding: 12px;
+                                transition: $ease_in_out;
+                            }
+
+                            .tagg-links{
+                                max-width: 100%;
+                                padding: 0 0.2rem;  margin-top: 1rem;
+                                cursor: pointer;
+
+                                ul{
+
+                                    li{
+                                        list-style-type: none;
+                                        border-bottom: 1px solid gray;
+                                        margin-bottom: 2px;
+
+                                        a{
+                                            text-decoration: none;
+                                            transition: $ease_in_out;
+                                            color: black;
+
+                                            &:hover{
+                                                color: red;
+                                                font-weight: bold;
+                                                transition: $ease_in_out;
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                    .brdBtn{
+                        border-bottom: 1px solid green!important;
+                        background-color: $green!important;
+                    }
+
+                }
+
+                .sample{
+                    background-color: #ff7101!important;
+                }
+
+            }
+
+            
+            
+
+            
+
+        }
+    }
+    .nav-side-b{
+        flex-basis: 100%;
+        height: 100%;
+        padding: 12px;
+        background-color: #EFEFEF;
+
+        .nav-menu{
+            max-width: 100%;
+            padding: 0.5rem;
+            position: absolute;
+
+            &__wrapper{
+                width: 28px;
+                height: 20px;
+                z-index: 2;
+                top: -0.2rem;
+                left: -0.2rem;
+                cursor: pointer;
+                position: absolute;
+
+                .nave-menu_btn{
+                    width: 28px;
+                    height: 4px;
+                    top: 0.5rem;
+                    position: absolute;
+                    background-color: $black;
+                    transition: $ease_in_out2;
+
+                    &::after{
+                        width: 20px;
+                        height: 4px;
+                        content: "";
+                        position: absolute;
+                        top: 8px;
+                        background-color: $black;
+                    }
+
+                    &::before{
+                        width: 28px;
+                        height: 4px;
+                        content: "";
+                        position: absolute;
+                        top: -8px;
+                        background-color: $black;
+                    }  
+                    
+                    
+                    &.open{
+                        transform: rotate(720deg);
+                        background: transparent;
+                        
+                        &::before{
+                            transform: rotate(45deg) translate(5px, 8px);
+                        }
+        
+                        &::after{
+                            width: 28px;
+                            transform: rotate(-45deg) translate(3px, -7px);
+                        }
+                    }
+                }
+                
+
+            }
+        }
+
+        .tagging-container{
+            max-width: 100%;
+            height: auto;
+            margin: 3rem 0 0 1rem;
+            overflow: auto;
+            padding: 12px;
+
+            .tagging-print-size{
+                width: 100%;
+                background-color: green;
+            }
+        }
+
+        .page-container{
+            max-width: 100%;
+            padding: 12px 14px;
+
+            a{
+                padding: 8px 12px;
+                text-decoration: none;
+                margin-left: 0.2rem;
+                border-radius: 0.2rem;
+                color: white;
+                background-color: #ff7101;
+
+                &:hover{
+                    background-color: #d45c00;
+                    transition: all 0.2s ease-in-out;
+                }
+                
+            }
+
+        }
+    }
+
+}

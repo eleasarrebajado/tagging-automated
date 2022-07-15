@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,500&display=swap');
+@import '_var-function.scss';
+@import '_mixin.scss';
+@import '_mobile-responsive.scss';
+@import '_fontstyle.scss';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-y: hidden;
+}
+
+.container_main{
+    max-width: 100%;
+    height: 100vh;
+    @include flex-collumn(row);
+    background-color: #009461;
+    
+    &--lft_box{
+        width: 20%;
+        height: 100vh;
+        overflow-y: hidden;
+        border-right: 1px solid #00dd90;
+
+        .container_main--img_box{
+            display: flex;
+            align-items: center;
+            line-height: 0.7;
+            flex-direction: column;
+            padding: 25px 0;
+            width: 100%;
+            height: 20vh;
+            color: $color3;
+            font-size: 0.8rem;
+            font-family: MontserratFont1;
+
+            img{
+                width: 30%;
+                height: auto;
+            }
+        }
+
+        ::-webkit-scrollbar{
+            width: 0;
+        }
+        .container_main--btn_container{
+            width: 80%;
+            // height: 500px;
+            padding: 12px;
+            margin: 0 auto;
+            overflow: auto;
+            @include flex-center;
+            cursor: grab;
+            color: #b4e9d6;
+            font-size: 0.8rem;
+            font-family: MontserratFont2;
+            
+            &:hover{
+                box-shadow: 0px 2px 3px 3px rgba(0,0,0,0.06);
+            }
+
+            div{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 0.1rem;
+                padding: 12px 9px;
+                border-radius: 0.4rem;
+                cursor: pointer;
+                color: $color1;
+                background-color: #045338;
+
+                &:hover{
+                    background-color: #024830;
+                }
+            }
+        }
+    }
+
+    &--right_box{
+        width: 80%;
+        height: 100vh;
+        background-color: $color3;
+        position: relative;
+        
+        .form-inputFiled{
+            opacity: 0;
+            @include form-input-filed;
+            @include flex-center;
+            pointer-events: none;
+            
+            .btnClose{
+                width: 30px;
+                height: 30px;
+                @include flex-center;
+                right: 4rem;
+                font-family: arial;
+                top: 1rem;
+                z-index: 2;
+                color: $color1;
+                cursor: pointer;
+                position: absolute;
+                border-radius: 0.3rem;
+                text-align: center;
+                font-size: 1.6rem;
+                // background-color: #062e21;
+                
+    
+                &:hover{
+                    background-color: #041e15;
+                    transition: $ease-in-out;
+                }
+            }
+    
+
+            &_box{ 
+                @include drpdownInput;
+                transform: translateY(-200px);
+                transition: $ease-in-out;
+                opacity: 0;
+                @include flex-center;
+
+                
+
+                &--tittle{
+                    width: $form-input-width;
+                    margin-left: 3rem;
+                    margin-top: 1rem;
+
+                    h4{
+                        font-family: MontserratFont1;
+                        margin: 0;
+                        font-size: 1rem;
+                    }
+                    p{
+                        font-family: MontserratFont3;
+                        margin: 0;
+                        font-size: 0.8rem;
+                    }
+
+                }
+
+                .form-inputFiled_box--drp{
+                    width: $form-input-width;
+                    height: 36.75rem;
+    
+                    .form-input-box{
+                        width: 50%;
+                        flex: 50%;
+                        padding: 3rem;
+                        float: left;
+                        font-family: MontserratFont2;
+
+                        &__btn{
+                            max-width: 100%;
+                            flex: 100%;
+                            padding: 12px 0 12px 0;
+                            display: flex;
+                            gap: 1px;
+                        }
+
+                        input[type=text]{
+                            width: 100%;
+                            padding: 8px 12px;
+                            margin: 0.8rem 0 0.8rem 0;
+                            border-radius: 0.3rem;
+                            @include inputOutline-style;
+                            font-family: MontserratFont2;
+                        }
+
+                        label{
+                            font-size: 0.7rem;
+                        }
+
+                        input[type=button]{
+                            @include inputStyle;
+                            @include inputOutline-style;
+                            border-radius: 0.3rem;
+                            cursor: pointer;
+
+                            &:hover{
+                                background-color: #ff6500;
+                                transition: $ease-in-out;
+                            }
+                        }
+
+                        input[type=file]{
+                            display: none;
+                            font-family: arial;
+                            font-size: $fontSize;
+                        }
+
+                        .del{
+                            @include inputStyle;
+                            @include inputOutline-style;
+                            border-radius: 0.3rem;
+                            background-color: #ff6500!important;
+                            cursor: pointer;
+
+                            &:hover{
+                                background-color: #e74100!important;
+                            }
+                        }
+
+
+                        .files {
+                            @include inputStyle;
+                            @include inputOutline-style;
+                            border-radius: 0.3rem;
+                            font-family: arial!important;
+                            cursor: pointer;
+                            text-align: center;
+                            font-size: $fontSize;
+                            
+                            &:hover{
+                                background-color: #24438f!important;
+                                transition: $ease-in-out;
+                            }
+                        }
+
+                        .up{
+                            @include inputStyle;
+                            @include inputOutline-style;
+                            border-radius: 0.3rem;
+                            cursor: pointer;
+                            font-size: $fontSize;
+
+                            &:hover{
+                                background-color: #24438f!important;
+                                transition: $ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .open{
+                transform: translateY(0);
+                position: absolute;
+                opacity: 1;
+                transition: $ease-in-out;
+            }
+
+
+        }
+
+        .open2{
+            opacity: 1;
+            transition: $ease-in-out;
+            pointer-events: auto;
+        }
+    }
+}

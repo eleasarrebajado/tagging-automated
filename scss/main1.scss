@@ -1,0 +1,159 @@
+@import '_mixin-loginStyle1.scss';
+@import '_fontstyle1.scss';
+@import '_mobile_responsive1.scss';
+@import '_var-function1.scss';
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: gray;
+}
+
+.landing-page{
+    max-width: 100%;
+    height: 100vh;
+    background: linear-gradient(215.47deg, rgba(27, 28, 50, 0.986) 90%, rgb(27, 28, 50) 80%), url('../images/eleasar-rebajado.png') no-repeat center center / cover;
+
+   &__container{
+        max-width: 100%;
+        flex: 100%;
+        display: flex;
+        flex-direction: row;
+        
+
+        &--box{
+            width: 60%;
+            height: 100vh;
+            @include flex-center;
+
+            .box-para{
+                width: 56.75rem;
+                padding: 12px;
+                display: flex;
+                flex-direction: column;
+
+                &--division-b{
+                    @include box-parastyle(auto);
+                    font-family: 'Anton', sans-serif;
+                    color: rgb(255, 255, 255);
+                    line-height: 2.8rem;
+                    
+                    img{
+                        width: 15.25rem;
+                    }
+                    
+
+                    h1{
+                        font-size: 6rem;
+                        margin-top: 2.3rem;
+                        letter-spacing: 0.1em;
+                    }
+
+                    h3{
+                        font-size: 4rem;
+                        margin: 0;
+                        letter-spacing: 0.1em;
+                    }
+
+                    p{
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 1.4rem;
+                        line-height: 2rem;
+                        margin-top: -1.4rem;
+                    }
+
+                    button{
+                        width: 10.25rem;
+                        height: 3.375rem;
+                        margin-top: 1rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 2.406rem;
+                        border: none;
+                        outline: none;
+                        background-color: #009461;
+                        color: rgb(255, 255, 255);
+                        box-sizing: border-box;
+                        font-size: 1.188rem;
+                        font-family: 'Montserrat', sans-serif;
+                        cursor: pointer;
+                        transition: $ease-in-out;e
+
+                        &:hover{
+                            background-color: #006d47;
+                            transition: $ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+
+        &--box2{
+            width: 40%;
+
+            &__branches-list{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                -webkit-clip-path: polygon(28% 0, 100% 0%, 100% 100%, 0 100%);
+                clip-path: polygon(28% 0, 100% 0%, 100% 100%, 0 100%);
+                background: linear-gradient(207.14deg, rgba(254, 169, 5, 0.89) -5.75%, rgba(255, 92, 0, 0.83) 76.12%), url(../images/image-3.png) no-repeat center center / cover;
+            
+                .branches-list-text-box{
+                    width: 50%;
+                    margin: 0 auto;
+                    padding: 12px;
+                    text-align: center;
+                    display: inline-block;
+                    font-family: 'Anton', sans-serif;
+                    color: rgb(238, 238, 238);
+                    letter-spacing: 0.1rem;
+
+                    h1{
+                        width: 100%;
+                        font-size: 3.5rem;
+                    }
+
+                    ul{
+                        width:70%;
+                        margin: 0 auto;
+                        text-align: left;
+                        line-height: 3rem;
+
+                        li{
+                            font-size: 2rem;
+                            cursor: pointer;
+
+                            a{
+                                font-size: 1.4rem;
+                                cursor: pointer;
+                                color: white;
+                                transition: $ease-in-out;
+
+                                &:link{
+                                    text-decoration: none;
+                                }
+
+                                &:hover {
+                                    color: #202020;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+   } // this is the end of landing page container
+
+
+}

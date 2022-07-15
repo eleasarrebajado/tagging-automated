@@ -1,0 +1,191 @@
+
+@import '_mixin-loginStyle.scss';
+@import '_var-function';
+@import '_login-fongStyle.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(215.47deg, rgba(255, 153, 0, 0.932) 19.86%, rgba(255, 93, 56, 0.911) 65.9%), url('../images/img-bg-home-builders.jpg') no-repeat center center / cover;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.login-main{
+    width: 100vw;
+    height: 100vh;
+    @include flex-center;
+
+    &--box{
+        width: 328px;
+        height: 461px;
+        background: #FFFAE7;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.44);
+        border-radius: 22px;
+
+        &__container-a{
+            width: 100%;
+            height: 119px;
+            @include flex-center;
+
+            img{
+                width: 97.28px;
+                height: auto;
+            }
+        }
+
+        &__container-b{
+            width: 100%;
+            height: 177px;
+            @include flex-center;
+            flex-direction: column;
+            
+            
+
+            .input-text-a{
+                @include input-style(0);
+
+                &__box-iconText-a{
+                    width: 31px;
+                    height: 20px;
+                }
+
+                &__box-iconText-b{
+                    width: 223px;
+                    height: 20px;
+                    // border: 1px solid black;
+
+                    input[type=text]{
+                        width: 80%;
+                        background-color: transparent;
+                        border: none;
+                        outline: none;
+                        font-weight: map-get($fontWeight, medium);
+                        font-family: map-get($fontFamily, 'Montserrat'), map-get($fontFamily,'sans-serif');
+                        color: map-get($fontColor, opacityBlack);
+                    }
+                }
+            }// this is the end of user
+
+            .input-text-b{
+                @include input-style(3rem);
+
+                &__box-iconText--a{
+                    width: 31px;
+                    height: 20px;
+                }
+
+                &__box-iconText-b{
+                    width: 222px;
+                    height: 20px;
+                    // border: 1px solid black;
+
+                    input[type=password]{
+                        width: 95%;
+                        background-color: transparent;
+                        border: none;
+                        outline: none;
+                        font-weight: map-get($fontWeight, medium);
+                        font-family: map-get($fontFamily, 'Montserrat'), map-get($fontFamily,'sans-serif');
+                        color: map-get($fontColor, opacityBlack);
+                    }
+
+                    &--showHide{
+                        width: 32px;
+                        height: 20px;
+                        cursor: pointer;
+                        @include flex-center;
+
+                        img{
+                            width: 20px;
+                            height: auto;
+                        }
+
+                        // .fa-solid{
+                        //     font-family: "Font Awesome 6 Free"!important;
+                        //     font-weight: 900!important;   
+                        // }
+                    }
+
+                    .inputTextNew{
+                        width: 95%;
+                        background-color: transparent;
+                        border: none;
+                        outline: none;
+                        font-weight: map-get($fontWeight, medium);
+                        font-family: map-get($fontFamily, 'Montserrat'), map-get($fontFamily,'sans-serif');
+                        color: map-get($fontColor, opacityBlack);
+
+                    }
+
+                }// this is the end of password
+            }
+            
+        } // this is the end of login main box container b
+
+        &__container-c{
+            width: 100%;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+
+            .input-btn-a{
+                width: 100%;
+                height: 37px;
+                display: flex;
+                align-items: center;
+                font-weight: map-get($fontWeight, medium);
+                font-family: map-get($fontFamily, 'Montserrat'), map-get($fontFamily,'sans-serif');
+                color: map-get($fontColor, opacityRed);
+
+                span{
+                    font-size: 0.75rem;
+                    font-weight: bold;
+                    margin-left: 47px;
+                    cursor: pointer;
+                    color: #d80000;
+                }
+            }
+
+            .input-btn-b{
+                width: 100%;
+                height: 57px;
+                @include flex-center;
+                
+
+                input[type=submit]{
+                    width: 254px;
+                    height: 39px;
+                    background: #009461;
+                    border-radius: 18px;
+                    border: none;
+                    outline: none;
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: white;
+                    cursor: pointer;
+                    transition: $ease-in-out;
+
+                    &:hover{
+                        background-color: #006944;
+                        transition: $ease-in-out;
+                    }
+                }
+            }
+        }
+
+        .errordiv{
+            max-width: 100%;
+            text-align: center;
+            padding: 5px;
+        }
+    }
+
+    
+
+}

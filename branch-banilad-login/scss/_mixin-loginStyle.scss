@@ -1,0 +1,16 @@
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin input-style($inputTop){
+        width: 254.06px;
+        height: 23.89px;
+        display: flex;
+        flex-direction: row;
+        margin-top: $inputTop;
+        border-bottom: 1px solid #000000;
+}
+
+

@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,500&display=swap");
+@media only screen and (max-width: 768px) {
+  .landing-page {
+    height: auto !important;
+  }
+  .landing-page__container {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .landing-page__container--box {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .landing-page__container--box .box-para--division-b {
+    text-align: center;
+    line-height: 2rem !important;
+  }
+  .landing-page__container--box .box-para--division-b img {
+    width: 9rem !important;
+  }
+  .landing-page__container--box .box-para--division-b h1 {
+    font-size: 5rem !important;
+  }
+  .landing-page__container--box .box-para--division-b h3 {
+    font-size: 2rem !important;
+  }
+  .landing-page__container--box .box-para--division-b p {
+    font-size: 1rem !important;
+    line-height: 1.4rem !important;
+  }
+  .landing-page__container--box .box-para--division-b button {
+    margin: 2rem auto !important;
+  }
+  .landing-page__container--box2 {
+    width: 100% !important;
+  }
+  .landing-page__container--box2__branches-list {
+    height: auto !important;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%) !important;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%) !important;
+  }
+  .landing-page__container--box2__branches-list .branches-list-text-box {
+    width: 100% !important;
+  }
+  .landing-page__container--box2__branches-list .branches-list-text-box h1 {
+    font-size: 3.5rem !important;
+  }
+  .landing-page__container--box2__branches-list .branches-list-text-box ul {
+    width: 100% !important;
+    text-align: center !important;
+    line-height: 2.6rem !important;
+  }
+  .landing-page__container--box2__branches-list .branches-list-text-box ul li a {
+    font-size: 2rem !important;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+}
+
+.landing-page {
+  max-width: 100%;
+  height: 100vh;
+  background: linear-gradient(215.47deg, rgba(27, 28, 50, 0.986) 90%, #1b1c32 80%), url("../images/eleasar-rebajado.png") no-repeat center center/cover;
+}
+
+.landing-page__container {
+  max-width: 100%;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.landing-page__container--box {
+  width: 60%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landing-page__container--box .box-para {
+  width: 56.75rem;
+  padding: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.landing-page__container--box .box-para--division-b {
+  width: 100%;
+  height: auto;
+  font-family: 'Anton', sans-serif;
+  color: white;
+  line-height: 2.8rem;
+}
+
+.landing-page__container--box .box-para--division-b img {
+  width: 15.25rem;
+}
+
+.landing-page__container--box .box-para--division-b h1 {
+  font-size: 6rem;
+  margin-top: 2.3rem;
+  letter-spacing: 0.1em;
+}
+
+.landing-page__container--box .box-para--division-b h3 {
+  font-size: 4rem;
+  margin: 0;
+  letter-spacing: 0.1em;
+}
+
+.landing-page__container--box .box-para--division-b p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-top: -1.4rem;
+}
+
+.landing-page__container--box .box-para--division-b button {
+  width: 10.25rem;
+  height: 3.375rem;
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2.406rem;
+  border: none;
+  outline: none;
+  background-color: #009461;
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.188rem;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+e
+.landing-page__container--box .box-para--division-b button:hover {
+  background-color: #006d47;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.landing-page__container--box2 {
+  width: 40%;
+}
+
+.landing-page__container--box2__branches-list {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-clip-path: polygon(28% 0, 100% 0%, 100% 100%, 0 100%);
+  clip-path: polygon(28% 0, 100% 0%, 100% 100%, 0 100%);
+  background: linear-gradient(207.14deg, rgba(254, 169, 5, 0.89) -5.75%, rgba(255, 92, 0, 0.83) 76.12%), url(../images/image-3.png) no-repeat center center/cover;
+}
+
+.landing-page__container--box2__branches-list .branches-list-text-box {
+  width: 50%;
+  margin: 0 auto;
+  padding: 12px;
+  text-align: center;
+  display: inline-block;
+  font-family: 'Anton', sans-serif;
+  color: #eeeeee;
+  letter-spacing: 0.1rem;
+}
+
+.landing-page__container--box2__branches-list .branches-list-text-box h1 {
+  width: 100%;
+  font-size: 3.5rem;
+}
+
+.landing-page__container--box2__branches-list .branches-list-text-box ul {
+  width: 70%;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 3rem;
+}
+
+.landing-page__container--box2__branches-list .branches-list-text-box ul li {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.landing-page__container--box2__branches-list .branches-list-text-box ul li a {
+  font-size: 1.9rem;
+  cursor: pointer;
+  color: white;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.landing-page__container--box2__branches-list .branches-list-text-box ul li a:link {
+  text-decoration: none;
+}
+
+.landing-page__container--box2__branches-list .branches-list-text-box ul li a:hover {
+  color: #202020;
+  text-decoration: underline;
+}
+/*# sourceMappingURL=main1.css.map */
