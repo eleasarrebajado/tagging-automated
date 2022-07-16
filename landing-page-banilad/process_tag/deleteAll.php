@@ -21,7 +21,6 @@ if(isset($_POST['deleteAllregPrt'])){
     if($stmt2->affected_rows == 0){
         header("location: ../regPortrait.php?error=DeleteAll");
     }
-
 }
 
 // this is the cool landscape division ==================
@@ -84,5 +83,30 @@ if(isset($_POST['deleteBuildLndscape'])){
 
     if($stmt->affected_rows == 0){
         header("location: ../buildLandscape.php?error=DeleteAll");
+    }
+}
+
+// this is the aquamix portrait division =============================
+
+if(isset($_POST['deleteAllAquaLndscape'])){
+    $stmt = $conn->prepare("TRUNCATE TABLE aquamix_landscape");
+    $stmt->get_result();
+    $stmt->execute();
+
+    if($stmt->affected_rows == 0){
+        header("location: ../aquamixLndscape.php?error=DeleteAll");
+    }
+}
+
+
+// this is the aquamix portrait division =============================
+
+if(isset($_POST['deleteAllAquaPrt'])){
+    $stmt = $conn->prepare("TRUNCATE TABLE aquamix_prt");
+    $stmt->get_result();
+    $stmt->execute();
+
+    if($stmt->affected_rows == 0){
+        header("location: ../aquamixPrt.php?error=DeleteAll");
     }
 }

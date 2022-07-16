@@ -157,7 +157,7 @@ require_once 'process_tag/process.php';
                                 <input type="submit" name="deleteAllAquaPrt" value="Delete All">
                                 <div class="tagg-links">
                                     <ul>
-                                        <li><a href="aquamixLndscape.php">Go Back to Landscape</a></li>
+                                        <li><a href="aquamixLndscape.php">Go Back to Portrait</a></li>
                                     </ul>
                                 </div>
                                 <p>Landscape</p>
@@ -166,7 +166,7 @@ require_once 'process_tag/process.php';
                                 <input type="submit" name="deleteAllAquaLndscape" value="Delete All">
                                 <div class="tagg-links">
                                     <ul>
-                                        <li><a href="aquamixPrt.php">Go Back to Portrait</a></li>
+                                        <li><a href="aquamixPrt.php">Go Back to Landscape</a></li>
                                     </ul>
                                 </div>
                             </form>
@@ -231,14 +231,14 @@ require_once 'process_tag/process.php';
                 <div class="tagging-container">
                     <div class="tagging-print-size">
 
-                    <?php require_once 'taggings/index-build-portrait.php'?> <!-- THIS IS THE REGULAR PORTRAINT TEMPLATE -->
+                    <?php require_once 'taggings/index-aquamix-portrait.php'?> <!-- THIS IS THE REGULAR PORTRAINT TEMPLATE -->
                         
                     </div> 
                 </div>
                 <div class="page-container">
 
                 <?php
-                    $stmt = $conn->prepare("SELECT * FROM `build_prt`");  
+                    $stmt = $conn->prepare("SELECT * FROM `aquamix_prt`");  
                     $stmt->execute();
                     $totalrecord = $stmt->get_result();
 
@@ -248,15 +248,15 @@ require_once 'process_tag/process.php';
     
                                 
                     if($page_user > 1){
-                        echo "<a class='pageStyle' href='buildPrt.php?page_user=".($page_user - 1)."'>Prev</a>";
+                        echo "<a class='pageStyle' href='aquamixPrt.php?page_user=".($page_user - 1)."'>Prev</a>";
                         }
 
                         for($i = 1; $i < $total_page_user; $i++){
-                                echo "<a class='pageStyle' href='buildPrt.php?page_user=".$i."'>$i</a>";
+                                echo "<a class='pageStyle' href='aquamixPrt.php?page_user=".$i."'>$i</a>";
                         }
 
                         if($i > $page_user){
-                            echo "<a class='pageStyle' href='buildPrt.php?page_user=".($page_user + 1)."'>Next</a>";
+                            echo "<a class='pageStyle' href='aquamixPrt.php?page_user=".($page_user + 1)."'>Next</a>";
                         }
                 ?>
 

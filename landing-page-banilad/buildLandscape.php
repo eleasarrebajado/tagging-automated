@@ -131,7 +131,7 @@ require_once 'process_tag/process.php';
                                 <input type="submit" name="deleteBuildPrt" value="Delete All">
                                 <div class="tagg-links">
                                     <ul>
-                                        <li><a href="buildLandscape.php">Go Back to Landscape</a></li>
+                                        <li><a href="buildPrt.php">Go Back to Landscape</a></li>
                                     </ul>
                                 </div>
                                 <p>Landscape</p>
@@ -150,14 +150,25 @@ require_once 'process_tag/process.php';
                     <li>
                         <div id="listBtn-e" class="list-btn">AQUAMIX</div>
                         <div class="list-btn__list-container">
-                            <form id="listDrop-e" method="post" action="">
+                            <form id="listDrop-e" method="post" action="process_tag/process.php" enctype="multipart/form-data">
                                 <p>portrait</p>
-                                <input type="file" value="upload">
-                                <input type="submit" action="" value="submit">
-                                <hr>
+                                <input type="file" name="fileAquamixPrt" value="upload">
+                                <input type="submit" name="aquamixPortrait" value="submit">
+                                <input type="submit" name="deleteAllAquaPrt" value="Delete All">
+                                <div class="tagg-links">
+                                    <ul>
+                                        <li><a href="aquamixLndscape.php">Go Back to Landscape</a></li>
+                                    </ul>
+                                </div>
                                 <p>Landscape</p>
-                                <input type="file" value="upload">
-                                <input type="submit" action="" value="submit">
+                                <input type="file" name="fileAquamixLndscape" value="upload">
+                                <input type="submit" name="aquamixLandscape" value="submit">
+                                <input type="submit" name="deleteAllAquaLndscape" value="Delete All">
+                                <div class="tagg-links">
+                                    <ul>
+                                        <li><a href="aquamixPrt.php">Go Back to Portrait</a></li>
+                                    </ul>
+                                </div>
                             </form>
                         </div>
                     </li>

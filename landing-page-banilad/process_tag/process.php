@@ -495,7 +495,7 @@ if(isset($_POST["buildPrt"]))
         $build_price = $filesop[1];
         $build_descript = $filesop[2];
         $build_article = $filesop[3];
-        $build_article = $filesop[4];
+        $build_tittle = $filesop[4];
         $build_prdct_name = $filesop[5];
         $sql = "insert into build_prt(build_brand_name, build_price, build_descript, build_article, build_tittle_prt, build_prdct_name_prt) values ('$build_brand_name', '$build_price', '$build_descript', '$build_article', '$build_tittle', '$build_prdct_name')";
         $stmt = mysqli_prepare($conn,$sql);
@@ -587,7 +587,7 @@ if(isset($_POST["buildLandscape"]))
         $build_price = $filesop[1];
         $build_descript = $filesop[2];
         $build_article = $filesop[3];
-        $build_article = $filesop[4];
+        $build_tittle = $filesop[4];
         $build_prdct_name = $filesop[5];
         $sql = "insert into build_lndscape(build_brand_name, build_price, build_descript, build_article, build_tittle, build_prdct_name) values ('$build_brand_name', '$build_price', '$build_descript', '$build_article', '$build_tittle', '$build_prdct_name')";
         $stmt = mysqli_prepare($conn,$sql);
@@ -626,5 +626,186 @@ if(isset($_GET['build_delete_lndscape'])){
 
     if($stmt->affected_rows == 0){
         header("location: ../buildLandscape.php?Delete");
+    }
+}
+
+
+// THIS IS THE AQUAMIX DIVISION PORTRAIT ===========================================
+// THIS IS THE AQUAMIX DIVISION PORTRAIT ===========================================
+// THIS IS THE AQUAMIX DIVISION PORTRAIT ===========================================
+// THIS IS THE AQUAMIX DIVISION PORTRAIT ===========================================
+// THIS IS THE AQUAMIX DIVISION PORTRAIT ===========================================
+
+
+
+if(isset($_POST["aquamixPortrait"]))
+
+    {         
+
+        $allowed = array('csv');
+        $filename = $_FILES["fileAquamixPrt"]["name"];
+        $text = pathinfo($filename, PATHINFO_EXTENSION);
+        if(!in_array($text, $allowed)){
+
+            $_SESSION['message'] = "Please check if the Excel format of file is <span style='color: #fff259; font-weight: bold'> CSV </span> and it should not be  <span style='color: #fff259; font-weight: bold'> EMPTY </span> before uploading";
+            $_SESSION['messagetype'] ="#dc3545;";
+            $_SESSION['messagetype1'] = "white";
+             header("location: ../aquamixPrt.php");
+           
+        } else {
+
+
+        $is_uploading = $_FILES["fileAquamixPrt"]["error"];
+
+        $can_pass = $is_uploading == 0 ? true : false;
+        
+        if($can_pass){
+                
+        $servername='localhost';
+        $username='root';
+        $pass='';
+        $conn=mysqli_connect($servername,$username,$pass,"automatedTaggingDb");
+        if(!$conn){
+        die('Could not Connect My Sql:' .mysqli_error());
+        }
+
+        $file = $_FILES['fileAquamixPrt']['tmp_name'];
+        $handle = fopen($file, "r");
+        $c = 0;
+        while(($filesop = fgetcsv($handle, 1000, ",")) !== false)
+                  {
+        $aquamix_brand_name = $filesop[0];
+        $aquamix_price = $filesop[1];
+        $aquamix_descript = $filesop[2];
+        $aquamix_article= $filesop[3];
+        $aquamix_tittle = $filesop[4];
+        $aquamix_prdct_name = $filesop[5];
+        $sql = "insert into aquamix_prt(aquamix_id_prt, aquamix_price, aquamix_descript, aquamix_article, aquamix_tittle, aquamix_prdct_name) values ('$aquamix_brand_name', '$aquamix_price', '$aquamix_descript', '$aquamix_article', '$aquamix_tittle', '$aquamix_prdct_name')";
+        $stmt = mysqli_prepare($conn,$sql);
+        mysqli_stmt_execute($stmt);
+
+       $c = $c + 1;
+         }
+
+          if($sql){
+             $_SESSION['message'] = "Good Job All Tagging has been Uploaded Successfully ";
+             $_SESSION['messagetype'] ="#0067b9";
+             $_SESSION['messagetype1'] = "#ffffff";
+             header("location: ../aquamixPrt.php?error=successUpload");
+           } 
+       else
+       {
+          echo "Sorry! Unable to impo.";
+        }
+
+    
+    } else {
+        header("location: ../aquamixPrt.php?error=uploadEmpty");
+        $_SESSION['message'] = "Error Please  Select File to Upload";
+        $_SESSION['messagetype'] ="#ff8585";
+        $_SESSION['messagetype1'] ="white";
+    }
+}
+
+}
+
+if(isset($_GET['aquamix_del_prt'])){
+    $id_build_prt = $_GET['aquamix_del_prt'];
+    $stmt = $conn->prepare("DELETE FROM aquamix_prt WHERE aquamix_id_prt = ?");
+    $stmt->bind_param("i", $id_build_prt);
+    $stmt->execute();
+
+    if($stmt->affected_rows == 0){
+        header("location: ../aquamixPrt.php?Delete");
+    }
+}
+
+
+// THIS IS THE AQUAMIX DIVISION LANDSCAPE ===========================================
+// THIS IS THE AQUAMIX DIVISION LANDSCAPE ===========================================
+// THIS IS THE AQUAMIX DIVISION LANDSCAPE ===========================================
+// THIS IS THE AQUAMIX DIVISION LANDSCAPE ===========================================
+// THIS IS THE AQUAMIX DIVISION LANDSCAPE ===========================================
+
+
+if(isset($_POST["aquamixLandscape"]))
+
+    {         
+
+        $allowed = array('csv');
+        $filename = $_FILES["fileAquamixLndscape"]["name"];
+        $text = pathinfo($filename, PATHINFO_EXTENSION);
+        if(!in_array($text, $allowed)){
+
+            $_SESSION['message'] = "Please check if the Excel format of file is <span style='color: #fff259; font-weight: bold'> CSV </span> and it should not be  <span style='color: #fff259; font-weight: bold'> EMPTY </span> before uploading";
+            $_SESSION['messagetype'] ="#dc3545;";
+            $_SESSION['messagetype1'] = "white";
+             header("location: ../aquamixLndscape.php");
+           
+        } else {
+
+
+        $is_uploading = $_FILES["fileAquamixLndscape"]["error"];
+
+        $can_pass = $is_uploading == 0 ? true : false;
+        
+        if($can_pass){
+                
+        $servername='localhost';
+        $username='root';
+        $pass='';
+        $conn=mysqli_connect($servername,$username,$pass,"automatedTaggingDb");
+        if(!$conn){
+        die('Could not Connect My Sql:' .mysqli_error());
+        }
+
+        $file = $_FILES['fileAquamixLndscape']['tmp_name'];
+        $handle = fopen($file, "r");
+        $c = 0;
+        while(($filesop = fgetcsv($handle, 1000, ",")) !== false)
+                  {
+        $aquamix_brand_name = $filesop[0];
+        $aquamix_price = $filesop[1];
+        $aquamix_descript = $filesop[2];
+        $aquamix_article= $filesop[3];
+        $aquamix_tittle = $filesop[4];
+        $aquamix_prdct_name = $filesop[5];
+        $sql = "insert into aquamix_landscape(aquamix_id_landscape, aquamix_price, aquamix_descript, aquamix_article, aquamix_tittle, aquamix_prdct_name) values ('$aquamix_brand_name', '$aquamix_price', '$aquamix_descript', '$aquamix_article', '$aquamix_tittle', '$aquamix_prdct_name')";
+        $stmt = mysqli_prepare($conn,$sql);
+        mysqli_stmt_execute($stmt);
+
+       $c = $c + 1;
+         }
+
+          if($sql){
+             $_SESSION['message'] = "Good Job All Tagging has been Uploaded Successfully ";
+             $_SESSION['messagetype'] ="#0067b9";
+             $_SESSION['messagetype1'] = "#ffffff";
+             header("location: ../aquamixLndscape.php?error=successUpload");
+           } 
+       else
+       {
+          echo "Sorry! Unable to impo.";
+        }
+
+    
+    } else {
+        header("location: ../aquamixLndscape.php?error=uploadEmpty");
+        $_SESSION['message'] = "Error Please  Select File to Upload";
+        $_SESSION['messagetype'] ="#ff8585";
+        $_SESSION['messagetype1'] ="white";
+    }
+}
+
+}
+
+if(isset($_GET['aquamix_delete_lndscape'])){
+    $id_build_prt = $_GET['aquamix_delete_lndscape'];
+    $stmt = $conn->prepare("DELETE FROM aquamix_landscape WHERE aquamix_id_landscape = ?");
+    $stmt->bind_param("i", $id_build_prt);
+    $stmt->execute();
+
+    if($stmt->affected_rows == 0){
+        header("location: ../aquamixLndscape.php?Delete");
     }
 }

@@ -206,3 +206,52 @@ if($conn->connect_error){
 // } else {
 //     echo "Failed to create table build landscape" .$conn->error;
 // }
+
+
+// this is the aquamix division ================================================
+// this is the aquamix division ================================================
+// this is the aquamix division ================================================
+// this is the aquamix division ================================================
+// this is the aquamix division ================================================
+
+
+// $sql = "CREATE TABLE aquamix_prt(
+//     aquamix_id_prt INT(9)UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+//     aquamix_brand_name VARCHAR(200)NOT NULL,
+//     aquamix_price VARCHAR(200)NOT NULL,
+//     aquamix_descript VARCHAR(200)NOT NULL,
+//     aquamix_article VARCHAR(200)NOT NULL,
+//     aquamix_tittle VARCHAR(200)NOT NULL,
+//     aquamix_prdct_name VARCHAR(200)NOT NULL,
+//     aquamix_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+// )";
+
+// if($conn->query($sql) === true){
+//     echo "Success created table aquamix portraint";
+// } else {
+//     echo "Failed to create aquamix table portrait" .$conn->error;
+// }
+
+// thi is the aquamix landscape division ==============================================
+// thi is the aquamix landscape division ==============================================
+// thi is the aquamix landscape division ==============================================
+// thi is the aquamix landscape division ==============================================
+// thi is the aquamix landscape division ==============================================
+
+
+// $sql = "CREATE TABLE aquamix_landscape(
+//     aquamix_id_landscape INT(9)UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+//     aquamix_brand_name VARCHAR(200)NOT NULL,
+//     aquamix_price VARCHAR(200)NOT NULL,
+//     aquamix_descript VARCHAR(200)NOT NULL,
+//     aquamix_article VARCHAR(200)NOT NULL,
+//     aquamix_tittle VARCHAR(200)NOT NULL,
+//     aquamix_prdct_name VARCHAR(200)NOT NULL,
+//     aquamix_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+// )";
+
+// if($conn->query($sql) === true){
+//     echo "Success created table aquamix landscape";
+// } else {
+//     echo "Failed to create aquamix table portrait" .$conn->error;
+// }

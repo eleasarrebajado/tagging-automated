@@ -131,13 +131,13 @@ require_once 'process_tag/process.php';
                                 <input type="submit" name="deleteBuildPrt" value="Delete All">
                                 <div class="tagg-links">
                                     <ul>
-                                        <li><a href="buildLandscape.php">Go Back to Landscape</a></li>
+                                        <li><a href="buildPrt.php">Go Back to Landscape</a></li>
                                     </ul>
                                 </div>
                                 <p>Landscape</p>
                                 <input type="file" name="fileBuildLndscape" value="upload">
                                 <input type="submit" name="buildLandscape" value="submit">
-                                <input type="submit" name="deleteBuild" value="Delte All"> 
+                                <input type="submit" name="deleteBuildLndscape" value="Delete All">
                                 <div class="tagg-links">
                                     <ul>
                                         <li><a href="buildPrt.php">Go Back to Portrait</a></li>
@@ -231,14 +231,14 @@ require_once 'process_tag/process.php';
                 <div class="tagging-container">
                     <div class="tagging-print-size">
 
-                    <?php require_once 'taggings/index-build-portrait.php'?> <!-- THIS IS THE REGULAR PORTRAINT TEMPLATE -->
+                    <?php require_once 'taggings/index-aquamix-landscape.php'?> <!-- THIS IS THE REGULAR PORTRAINT TEMPLATE -->
                         
                     </div> 
                 </div>
                 <div class="page-container">
 
                 <?php
-                    $stmt = $conn->prepare("SELECT * FROM `build_prt`");  
+                    $stmt = $conn->prepare("SELECT * FROM `build_lndscape`");  
                     $stmt->execute();
                     $totalrecord = $stmt->get_result();
 
@@ -248,15 +248,15 @@ require_once 'process_tag/process.php';
     
                                 
                     if($page_user > 1){
-                        echo "<a class='pageStyle' href='buildPrt.php?page_user=".($page_user - 1)."'>Prev</a>";
+                        echo "<a class='pageStyle' href='buildLandscape.php?page_user=".($page_user - 1)."'>Prev</a>";
                         }
 
                         for($i = 1; $i < $total_page_user; $i++){
-                                echo "<a class='pageStyle' href='buildPrt.php?page_user=".$i."'>$i</a>";
+                                echo "<a class='pageStyle' href='buildLandscape.php?page_user=".$i."'>$i</a>";
                         }
 
                         if($i > $page_user){
-                            echo "<a class='pageStyle' href='buildPrt.php?page_user=".($page_user + 1)."'>Next</a>";
+                            echo "<a class='pageStyle' href='buildLandscape.php?page_user=".($page_user + 1)."'>Next</a>";
                         }
                 ?>
 
